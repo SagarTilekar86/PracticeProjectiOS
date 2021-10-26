@@ -15,6 +15,7 @@
 		DAD4BCD9271F11CA002C4DF3 /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD4BCD8271F11CA002C4DF3 /* UsersViewModel.swift */; };
 		DAD4BCE1271FE3DA002C4DF3 /* UsersListElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD4BCE0271FE3DA002C4DF3 /* UsersListElement.swift */; };
 		DAD4BCEE271FEAC9002C4DF3 /* PracticeProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD4BCED271FEAC9002C4DF3 /* PracticeProjectTests.swift */; };
+		DAD8F2242726DC8F00DD84FF /* NameTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD8F2232726DC8F00DD84FF /* NameTextFieldView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		DAD4BCEB271FEAC9002C4DF3 /* PracticeProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PracticeProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD4BCED271FEAC9002C4DF3 /* PracticeProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeProjectTests.swift; sourceTree = "<group>"; };
 		DAD4BCEF271FEAC9002C4DF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAD8F2232726DC8F00DD84FF /* NameTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTextFieldView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				A3AA667C26F4AC870036A55A /* API */,
 				A3AA666E26F4AC650036A55A /* PracticeProjectApp.swift */,
 				A3AA667026F4AC650036A55A /* ContentView.swift */,
+				DAD8F2232726DC8F00DD84FF /* NameTextFieldView.swift */,
 				A3AA667F26F4AE2F0036A55A /* README.md */,
 				A3AA667226F4AC660036A55A /* Assets.xcassets */,
 				A3AA667426F4AC660036A55A /* Preview Content */,
@@ -237,6 +240,7 @@
 				A3AA667126F4AC650036A55A /* ContentView.swift in Sources */,
 				DAD4BCE1271FE3DA002C4DF3 /* UsersListElement.swift in Sources */,
 				DAD4BCD9271F11CA002C4DF3 /* UsersViewModel.swift in Sources */,
+				DAD8F2242726DC8F00DD84FF /* NameTextFieldView.swift in Sources */,
 				A3AA667E26F4AC980036A55A /* API.swift in Sources */,
 				A3AA666F26F4AC650036A55A /* PracticeProjectApp.swift in Sources */,
 			);
