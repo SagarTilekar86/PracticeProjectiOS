@@ -12,6 +12,7 @@
 		A3AA667326F4AC660036A55A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3AA667226F4AC660036A55A /* Assets.xcassets */; };
 		A3AA667626F4AC660036A55A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3AA667526F4AC660036A55A /* Preview Assets.xcassets */; };
 		A3AA667E26F4AC980036A55A /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AA667D26F4AC980036A55A /* API.swift */; };
+		DAABB321273CF00F00CE1332 /* CardBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAABB320273CF00F00CE1332 /* CardBoxView.swift */; };
 		DAD4BCD9271F11CA002C4DF3 /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD4BCD8271F11CA002C4DF3 /* UsersViewModel.swift */; };
 		DAD4BCE1271FE3DA002C4DF3 /* UsersListElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD4BCE0271FE3DA002C4DF3 /* UsersListElement.swift */; };
 		DAD4BCEE271FEAC9002C4DF3 /* PracticeProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD4BCED271FEAC9002C4DF3 /* PracticeProjectTests.swift */; };
@@ -35,6 +36,7 @@
 		A3AA667526F4AC660036A55A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A3AA667D26F4AC980036A55A /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		A3AA667F26F4AE2F0036A55A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		DAABB320273CF00F00CE1332 /* CardBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBoxView.swift; sourceTree = "<group>"; };
 		DAD4BCD8271F11CA002C4DF3 /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
 		DAD4BCE0271FE3DA002C4DF3 /* UsersListElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListElement.swift; sourceTree = "<group>"; };
 		DAD4BCEB271FEAC9002C4DF3 /* PracticeProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PracticeProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +88,7 @@
 				A3AA667C26F4AC870036A55A /* API */,
 				A3AA666E26F4AC650036A55A /* PracticeProjectApp.swift */,
 				A3AA667026F4AC650036A55A /* ContentView.swift */,
+				DAABB320273CF00F00CE1332 /* CardBoxView.swift */,
 				A3AA667F26F4AE2F0036A55A /* README.md */,
 				A3AA667226F4AC660036A55A /* Assets.xcassets */,
 				A3AA667426F4AC660036A55A /* Preview Content */,
@@ -238,6 +241,7 @@
 				DAD4BCE1271FE3DA002C4DF3 /* UsersListElement.swift in Sources */,
 				DAD4BCD9271F11CA002C4DF3 /* UsersViewModel.swift in Sources */,
 				A3AA667E26F4AC980036A55A /* API.swift in Sources */,
+				DAABB321273CF00F00CE1332 /* CardBoxView.swift in Sources */,
 				A3AA666F26F4AC650036A55A /* PracticeProjectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
