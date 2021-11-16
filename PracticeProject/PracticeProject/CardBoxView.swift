@@ -11,7 +11,8 @@ struct CardBoxView: View {
     @State private var cardNumber: String = ""
     @State private var expiryDate: String = ""
     @State private var securityCode: String = ""
-    @State var isSelected: Bool = true
+    //@Binding private var image: Image?
+    //@State var isSelected: Bool = true
     
     var body: some View {
         
@@ -21,22 +22,28 @@ struct CardBoxView: View {
         //Card Box View
         return VStack(alignment: .leading, spacing:0) {
             VStack(alignment: .leading, spacing:0) {
+                HStack(spacing: 0) {
                 TextField("Card number",text: $cardNumber)
                     .applyCardFieldModifier()
-                Divider().background(Color.gray)
+                    Image(systemName: "cloud.sun")
+                        .padding(.all)
+                }
+                .applyHorizontalContainerModifier()
+                Divider()
+                    .applyViewDividerModifier()
                 HStack(spacing: 0) {
                     TextField("Exp.date(mm/yy)",text: $expiryDate)
                         .applyCardFieldModifier()
-                    Divider().background(Color.gray)
+                    Divider()
+                        .applyViewDividerModifier()
                     TextField("Security Code",text: $securityCode)
                         .applyCardFieldModifier()
                 }
-                .applyHStackModifier()
+                .applyHorizontalContainerModifier()
             }
-            .applyVStackModifier()
+            .applyVerticalContainerModifier()
         }
     }
-    
 }
 
 /*Code Commented for Future reference**/

@@ -30,12 +30,12 @@ struct CardFieldModifier: ViewModifier {
 
 /* Below logic implementation is for VStack*/
 extension VStack {
-    func applyVStackModifier() -> some View {
-        return modifier(VStackModifier())
+    func applyVerticalContainerModifier() -> some View {
+        return modifier(VerticalContainerModifier())
     }
 }
 
-struct VStackModifier: ViewModifier {
+struct VerticalContainerModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .overlay(
@@ -49,15 +49,47 @@ struct VStackModifier: ViewModifier {
   
 /* Below logic implementation is for HStack*/
 extension HStack {
-    func applyHStackModifier() -> some View {
-        return modifier(HStackModifier())
+    func applyHorizontalContainerModifier() -> some View {
+        return modifier(HorizontalContainerModifier())
     }
 }
 
-struct HStackModifier: ViewModifier {
+struct HorizontalContainerModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .fixedSize(horizontal: false, vertical: true)
     }
 }
 /*End **/
+
+/*Below is for Divider line**/
+extension Divider {
+    func applyViewDividerModifier() -> some View {
+        return modifier(DividerModifier())
+    }
+}
+
+struct DividerModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .background(Color.gray)
+    }
+}
+
+/*End**/
+
+/*Below is for UImage Modifier**/
+//extension UIImageView {
+//    func applyViewImageModifier() -> some View {
+//      return modifier
+//
+//    }
+//}
+//
+//struct UIImageModifier: ViewModifier {
+//    func body(content: Content) -> some View {
+//        content
+//            .padding(.all)
+//    }
+//}
+/*End**/
