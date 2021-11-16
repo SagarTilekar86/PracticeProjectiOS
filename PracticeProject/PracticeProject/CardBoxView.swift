@@ -6,14 +6,20 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct CardBoxView: View {
+    
     @State private var cardNumber: String = ""
     @State private var expiryDate: String = ""
     @State private var securityCode: String = ""
-    //@Binding private var image: Image?
-    //@State var isSelected: Bool = true
-    
+    @State var images: [Image] = [
+        Image(uiImage: UIImage()),
+        Image(systemName: "cloud.sun"),
+        Image(systemName: "cloud"),
+        Image(systemName: "cloud.bolt")
+    ]
+
     var body: some View {
         
         print(cardNumber)
@@ -23,10 +29,12 @@ struct CardBoxView: View {
         return VStack(alignment: .leading, spacing:0) {
             VStack(alignment: .leading, spacing:0) {
                 HStack(spacing: 0) {
-                TextField("Card number",text: $cardNumber)
-                    .applyCardFieldModifier()
-                    Image(systemName: "cloud.sun")
-                        .padding(.all)
+                    TextField("Card number",text: $cardNumber)
+                        .applyCardFieldModifier()
+                    ForEach(0..<images.count) { index in
+                        images[index]
+                            .applyViewImageModifier()
+                    }
                 }
                 .applyHorizontalContainerModifier()
                 Divider()

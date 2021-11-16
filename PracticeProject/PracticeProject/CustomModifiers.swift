@@ -10,19 +10,29 @@ import SwiftUI
 
 /* Below logic implementation is for TexField*/
 extension TextField {
-    func applyCardFieldModifier() -> some View {
+    func applyCardFieldModifier(verticalPadding: CGFloat = 10.0, horizontalPadding: CGFloat = 5.0) -> some View {
           // This allows returning a different 'custom' modifier created by customer (for now it returns `CardFieldModifier`)
-        return modifier(CardFieldModifier())
+        let cardModifier = CardFieldModifier(verticalPadding: verticalPadding, horizontalPadding: horizontalPadding)
+        return modifier(cardModifier)
       }
     
 }
 
 struct CardFieldModifier: ViewModifier {
+    
+    let verticalPadding: CGFloat
+    let horizontalPadding: CGFloat
+    
+    init(verticalPadding: CGFloat, horizontalPadding: CGFloat) {
+        self.verticalPadding = verticalPadding
+        self.horizontalPadding = horizontalPadding
+    }
+    
     func body(content: Content) -> some View {
         content
             .font(.caption2)
-            .padding(.vertical,10.0)
-            .padding(.horizontal,5.0)
+            .padding(.vertical, verticalPadding)
+            .padding(.horizontal, horizontalPadding)
     }
 }
 
@@ -79,17 +89,17 @@ struct DividerModifier: ViewModifier {
 /*End**/
 
 /*Below is for UImage Modifier**/
-//extension UIImageView {
-//    func applyViewImageModifier() -> some View {
-//      return modifier
-//
-//    }
-//}
-//
-//struct UIImageModifier: ViewModifier {
-//    func body(content: Content) -> some View {
-//        content
-//            .padding(.all)
-//    }
-//}
-/*End**/
+extension Image {
+    func applyViewImageModifier() -> some View {
+      return modifier(ImageModifier())
+
+    }
+}
+
+struct ImageModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .padding(.trailing, 5.0)
+    }
+}
+/*End*/
