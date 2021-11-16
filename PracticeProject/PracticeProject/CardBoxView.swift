@@ -6,15 +6,13 @@
 //
 
 import SwiftUI
-import UIKit
 
 struct CardBoxView: View {
     
     @State private var cardNumber: String = ""
     @State private var expiryDate: String = ""
     @State private var securityCode: String = ""
-    @State var images: [Image] = [
-        Image(uiImage: UIImage()),
+    var images: [Image] = [
         Image(systemName: "cloud.sun"),
         Image(systemName: "cloud"),
         Image(systemName: "cloud.bolt")
