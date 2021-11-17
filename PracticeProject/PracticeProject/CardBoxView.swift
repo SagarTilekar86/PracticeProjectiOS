@@ -14,8 +14,8 @@ struct CardBoxView: View {
     @State private var securityCode: String = ""
     var images: [Image] = [
         Image(systemName: "cloud.sun"),
-        Image(systemName: "cloud"),
-        Image(systemName: "cloud.bolt")
+//        Image(systemName: "cloud"),
+//        Image(systemName: "cloud.bolt")
     ]
 
     var body: some View {
@@ -27,8 +27,9 @@ struct CardBoxView: View {
         return VStack(alignment: .leading, spacing:0) {
             VStack(alignment: .leading, spacing:0) {
                 HStack(spacing: 0) {
-                    TextField("Card number",text: $cardNumber)
-                        .applyCardFieldModifier()
+                    // TextField("Card number",text: $cardNumber)
+                    CustomTextField(placeholder:"Card number", text:  $cardNumber)
+                    //.applyCardFieldModifier(text: "Card number")
                     ForEach(0..<images.count) { index in
                         images[index]
                             .applyViewImageModifier()
@@ -38,12 +39,14 @@ struct CardBoxView: View {
                 Divider()
                     .applyViewDividerModifier()
                 HStack(spacing: 0) {
-                    TextField("Exp.date(mm/yy)",text: $expiryDate)
-                        .applyCardFieldModifier()
+                    //  TextField("Exp.date(mm/yy)",text: $expiryDate)
+                    CustomTextField(placeholder:"Exp.date(mm/yy)", text:  $expiryDate)
+                    // .applyCardFieldModifier()
                     Divider()
                         .applyViewDividerModifier()
-                    TextField("Security Code",text: $securityCode)
-                        .applyCardFieldModifier()
+                    // TextField("Security Code",text: $securityCode)
+                    CustomTextField(placeholder:"Security Code", text:  $securityCode)
+                    //.applyCardFieldModifier()
                 }
                 .applyHorizontalContainerModifier()
             }
@@ -51,6 +54,8 @@ struct CardBoxView: View {
         }
     }
 }
+
+
 
 /*Code Commented for Future reference**/
 
@@ -84,11 +89,9 @@ struct CardBoxView: View {
 //    }
 //}
 
-
 struct CardBoxView_Previews: PreviewProvider {
     static var previews: some View {
         CardBoxView()
     }
 }
-
 

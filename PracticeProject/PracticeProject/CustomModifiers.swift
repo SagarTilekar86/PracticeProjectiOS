@@ -18,11 +18,20 @@ extension TextField {
     
 }
 
+extension Text {
+    func applyCardFieldModifier(verticalPadding: CGFloat = 10.0, horizontalPadding: CGFloat = 5.0) -> some View {
+          // This allows returning a different 'custom' modifier created by customer (for now it returns `CardFieldModifier`)
+        let cardModifier = CardFieldModifier(verticalPadding: verticalPadding, horizontalPadding: horizontalPadding)
+        return modifier(cardModifier)
+      }
+    
+}
+
 struct CardFieldModifier: ViewModifier {
     
     let verticalPadding: CGFloat
     let horizontalPadding: CGFloat
-    
+
     init(verticalPadding: CGFloat, horizontalPadding: CGFloat) {
         self.verticalPadding = verticalPadding
         self.horizontalPadding = horizontalPadding
@@ -50,7 +59,8 @@ struct VerticalContainerModifier: ViewModifier {
         content
             .overlay(
                 RoundedRectangle(cornerRadius:5.0)
-                    .stroke(Color(UIColor.gray), lineWidth:0.5)
+                    .stroke(Color.secondary, lineWidth:0.5)
+                //here we can also put Color(UIColor.systemGray)
             )
             .padding(.horizontal)
     }
@@ -82,10 +92,10 @@ extension Divider {
 struct DividerModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .background(Color.gray)
+            .background(Color.primary)
+        //here we can also put Color(UIColor.systemGray)
     }
 }
-
 /*End**/
 
 /*Below is for UImage Modifier**/
@@ -99,7 +109,30 @@ extension Image {
 struct ImageModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .padding(.trailing, 5.0)
+            .padding(.trailing, 10.0)
     }
 }
 /*End*/
+
+
+//TextField with custom placeholder color
+struct CustomTextField: View {
+    
+    var placeholder: String
+    @Binding var text: String
+    var editingChanged: (Bool)->() = { _ in }
+    var commit: ()->() = { }
+    
+    var body: some View {
+        ZStack(alignment: .leading) {
+            if text.isEmpty {
+                Text(placeholder)
+                    .foregroundColor(Color.secondary) //here we can also put Color(UIColor.systemGray)
+                .applyCardFieldModifier()
+            }
+            TextField("", text: $text, onEditingChanged: editingChanged, onCommit: commit)
+                .applyCardFieldModifier()
+        }
+    }
+    
+}
