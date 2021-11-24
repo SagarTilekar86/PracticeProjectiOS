@@ -15,10 +15,14 @@ struct PracticeProjectApp: App {
         }
     }
     
-    func makeContentView() -> ContentView{
-        let session = URLSession.shared
-        let serviceManager = ServiceManager(session: session)
-        let viewModel = UsersViewModel(service: serviceManager)
-        return ContentView(viewModel: viewModel)
+//    func makeContentView() -> ContentView{
+//        let session = URLSession.shared
+//        let serviceManager = ServiceManager(session: session)
+//        let viewModel = UsersViewModel(service: serviceManager)
+//        return ContentView(viewModel: viewModel)
+//    }
+    
+    func makeContentView() -> CardBoxView {
+        return CardBoxView()
     }
 }
