@@ -14,6 +14,8 @@
 		A3AA667E26F4AC980036A55A /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AA667D26F4AC980036A55A /* API.swift */; };
 		DA28530627420A85005FB92B /* CustomModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA28530527420A85005FB92B /* CustomModifiers.swift */; };
 		DAABB321273CF00F00CE1332 /* CardBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAABB320273CF00F00CE1332 /* CardBoxView.swift */; };
+		DACE6897274D18C700EB11FD /* CardBoxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACE6896274D18C700EB11FD /* CardBoxViewModel.swift */; };
+		DACE689B274D1C1D00EB11FD /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACE689A274D1C1D00EB11FD /* Constant.swift */; };
 		DAD4BCD9271F11CA002C4DF3 /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD4BCD8271F11CA002C4DF3 /* UsersViewModel.swift */; };
 		DAD4BCE1271FE3DA002C4DF3 /* UsersListElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD4BCE0271FE3DA002C4DF3 /* UsersListElement.swift */; };
 		DAD4BCEE271FEAC9002C4DF3 /* PracticeProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD4BCED271FEAC9002C4DF3 /* PracticeProjectTests.swift */; };
@@ -39,6 +41,8 @@
 		A3AA667F26F4AE2F0036A55A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DA28530527420A85005FB92B /* CustomModifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomModifiers.swift; sourceTree = "<group>"; };
 		DAABB320273CF00F00CE1332 /* CardBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBoxView.swift; sourceTree = "<group>"; };
+		DACE6896274D18C700EB11FD /* CardBoxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBoxViewModel.swift; sourceTree = "<group>"; };
+		DACE689A274D1C1D00EB11FD /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		DAD4BCD8271F11CA002C4DF3 /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
 		DAD4BCE0271FE3DA002C4DF3 /* UsersListElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListElement.swift; sourceTree = "<group>"; };
 		DAD4BCEB271FEAC9002C4DF3 /* PracticeProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PracticeProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,7 +93,9 @@
 				DAD4BCD7271F119C002C4DF3 /* ViewModel */,
 				A3AA667C26F4AC870036A55A /* API */,
 				A3AA666E26F4AC650036A55A /* PracticeProjectApp.swift */,
+				DACE689A274D1C1D00EB11FD /* Constant.swift */,
 				DA28530527420A85005FB92B /* CustomModifiers.swift */,
+				DACE6896274D18C700EB11FD /* CardBoxViewModel.swift */,
 				A3AA667026F4AC650036A55A /* ContentView.swift */,
 				DAABB320273CF00F00CE1332 /* CardBoxView.swift */,
 				A3AA667F26F4AE2F0036A55A /* README.md */,
@@ -240,7 +246,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DACE6897274D18C700EB11FD /* CardBoxViewModel.swift in Sources */,
 				A3AA667126F4AC650036A55A /* ContentView.swift in Sources */,
+				DACE689B274D1C1D00EB11FD /* Constant.swift in Sources */,
 				DAD4BCE1271FE3DA002C4DF3 /* UsersListElement.swift in Sources */,
 				DAD4BCD9271F11CA002C4DF3 /* UsersViewModel.swift in Sources */,
 				A3AA667E26F4AC980036A55A /* API.swift in Sources */,

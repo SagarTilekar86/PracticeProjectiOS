@@ -14,9 +14,10 @@ struct CardBoxView: View {
     @State private var securityCode: String = ""
     var images: [Image] = [
         Image(systemName: "cloud.sun"),
-//        Image(systemName: "cloud"),
-//        Image(systemName: "cloud.bolt")
+        Image(systemName: "cloud"),
+        Image(systemName: "cloud.bolt")
     ]
+    let viewModel = CardBoxViewModel()
 
     var body: some View {
         
@@ -28,7 +29,10 @@ struct CardBoxView: View {
             VStack(alignment: .leading, spacing:0) {
                 HStack(spacing: 0) {
                     // TextField("Card number",text: $cardNumber)
-                    CustomTextField(placeholder:"Card number", text:  $cardNumber)
+                    CustomTextField(placeholder:Constant.cardFieldPlaceholderText, text:  $cardNumber)
+                        .onChange(of: cardNumber) { newValue in
+                            cardNumber = viewModel.modifyCardNumber(newValue)
+                        }
                     //.applyCardFieldModifier(text: "Card number")
                     ForEach(0..<images.count) { index in
                         images[index]
@@ -40,22 +44,37 @@ struct CardBoxView: View {
                     .applyViewDividerModifier()
                 HStack(spacing: 0) {
                     //  TextField("Exp.date(mm/yy)",text: $expiryDate)
-                    CustomTextField(placeholder:"Exp.date(mm/yy)", text:  $expiryDate)
+                    CustomTextField(placeholder:Constant.expiryDatePlaceholderText, text:  $expiryDate)
+                        .onChange(of: expiryDate) { newValue in
+                            expiryDate = viewModel.modifyExpiryDate(newValue)
+                        }
+                   
                     // .applyCardFieldModifier()
                     Divider()
                         .applyViewDividerModifier()
                     // TextField("Security Code",text: $securityCode)
-                    CustomTextField(placeholder:"Security Code", text:  $securityCode)
-                    //.applyCardFieldModifier()
+//                    CustomTextField(placeholder:"Security Code", text:  $securityCode)
+                    CustomSecureField(placeholder:Constant.securityCodePlaceholderText, text: $securityCode)
+                        .onChange(of: securityCode) { newValue in
+                            securityCode = viewModel.modifySecurityCode(newValue)
+                        }
+                        //.applyCardFieldModifier()
                 }
                 .applyHorizontalContainerModifier()
             }
             .applyVerticalContainerModifier()
         }
+        .onTapGesture {
+            UIApplication.shared.endEditing()
+        }
     }
 }
 
-
+extension UIApplication {
+    func endEditing() {
+        sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+}
 
 /*Code Commented for Future reference**/
 
